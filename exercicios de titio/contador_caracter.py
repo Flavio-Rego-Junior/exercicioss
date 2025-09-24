@@ -13,5 +13,5 @@ def contar_caracteres (x):
 print("escreva uma oalavra")
 palavra = str(input(">>>"))
 contagemF =  contar_caracteres(palavra)
-print("essa palvra tem",contagemF, "caracteres, não contando os espaços de inicio e fim ")
+print("essa palvra tem",contagemF, "caracteres, não contando os espaços  de inicio e fim ")
 
