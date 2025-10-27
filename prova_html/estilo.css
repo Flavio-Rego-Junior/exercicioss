@@ -1,0 +1,150 @@
+*{ margin:0px;  /* remove margens */
+   padding: 0px;  /* remove margens */
+   box-sizing: border-box;  /* inclui padding e borda na largura/altura */
+}
+.container { /* CHAMANDO A CLASE CRIADA */
+    display: flex; /*colocando o display como flex*/
+    flex-wrap: wrap; /* PERMITE QUEBRAR A LINHA CASO O CODIGO PRECISE */
+}
+
+header,
+nav,
+main,
+aside,
+article,
+footer {
+    background-color: #fce4ec;  /*mudando a cor de fundo*/
+    margin: 3px; /* DEFININDO O TAMANHO PADRÃO DAS MARGENS EXTERNAS */
+    display: flex;  /* PERMITINDO O ALINHAMENTO PADRÃO */
+    padding: 10px; /* DEFININDO O ESPAÇAMENTO PADRÃO */
+    box-sizing: border-box; /* definindo a borda da caixa*/
+}
+ 
+header {
+    flex: 1 1 100%; 
+    height: 100px; /* DEFINE A ALTURA DO CABEÇALHO */
+    justify-content: center; /* CENTRALIZA HORIZONTALMENTE O CABEÇALHO */
+    align-items: center; /* CENTRALIZA VERTICALMENTE O CABEÇALHO */
+    font-size: 30px;/*tamanho da fonte*/ 
+    color: #444;/*mudando a cor*/
+    
+}
+
+nav { /*mechendo na navegação etilizando
+    flex: 1 1 100%; 
+    height: 50px; /* DEFINE A ALTURA DO CABEÇALHO */
+    justify-content: center; /* CENTRALIZA HORIZONTALMENTE O CABEÇALHO */
+    align-items: center; /* CENTRALIZA VERTICALMENTE O CABEÇALHO */
+}
+
+ul {
+   display: flex;/*colocando o display como flex*/
+   justify-content: center; /* CENTRALIZA HORIZONTALMENTE A BARRA DE NAVEGAÇÃO */   
+   list-style: none; /* REMOVE AS BOLINHAS QUE FICAM NA FRENTE DOS NOMES */
+   gap: 20px; /* DAR UM ESPAÇO ENTRE O ITENS */
+   padding: 0;/* tirando espaçamento */
+   margin: 0 ;/*tirando margem*/
+   
+}
+
+ul li {
+    display: flex;  /* ativando layout flexível */  
+    align-items: center; /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    color: #444;/*mudando a cor*/
+    
+}
+
+a{
+    text-decoration: none;  /* removendo sublinhado */
+    color: #444;/*mudando a cor*/
+    font-weight: bold;  /* deixando em negrito */
+    font-size: 18px; /* definindo tamanho da fonte */
+    padding: 5px 10px;/*definindo espaçamento*/
+    border-radius: 10px 0px; /* arredondando cantos */
+    background-color: white;  /* cor de fundo branca */
+}
+a :hover {
+    color: #444;/*mudando a cor*/
+    background-color: white; /* cor de fundo branca */
+}
+
+/*MAIN LAYOUT*/
+main {
+  display: flex;  /* ativando layout flexível */
+  flex: 1; /* ocupando espaço disponível */
+}
+
+/*parte da esquerda*/
+.left {
+  flex: 1;
+  background:#fce4ec;  /* cor de fundo rosa */
+  padding: 100px 60px;/*definindo espaçamento*/
+}
+.left h1 {
+  margin-bottom: 20px;  /* espaçamento abaixo */
+  font-size: 1.2rem;  /* tamanho da fonte */
+}
+
+.left p {
+color: #444;/*mudando a cor*/
+line-height: 1.5; /* espaçamento entre linhas */
+margin-bottom: 40px;  /* espaço abaixo */
+max-width: 400px; /* largura máxima */
+}
+
+.preço { /* AJUSTANDO O TAMNHO DO PREÇO */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* ESPAÇAMENTO */
+}
+
+.preço button { /* ajustando o botao */
+   padding: 10px 20px;
+   background:none;/*mudando a cor do fundo*/
+   color: white; ;/*mudando a cor*/
+   border: none;   /* remove a borda */
+  transition: 0.3s; /* duração da transição */
+  border-radius: 10px; /* cantos arredondados */
+  box-shadow:0 6px 12px rgba(0, 0, 0, 0.3); /* sombra suave */
+}
+
+.preço button:hover{ /* configurando a cor do botao */
+  background: #df6c92;  /* cor de fundo */
+  transform: translateY(-4px); /* move pra cima */
+  cursor: pointer;  /* muda cursor ao passar */
+}
+
+.centro{
+  flex: 1; /* ocupa o espaço disponível */
+  background-color: #fce4ec; /*cor dpo fundo do centro*/
+  display: flex;  /* ativa layout flexível */
+  flex-direction: column;  /* organiza em coluna */
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center; /* CENTRALIZA HORIZONTALMENTE DO CENTRO*/
+  position: relative; /* posicionamento relativo */
+  font-family: Inter, sans-serif;  /* define a fonte */
+} 
+
+.centro img.fotooooaa {
+  width: 600px; /* largura da imagem */
+  z-index: 1;  /* define a camada da imagem */
+}
+
+.centro h1{
+  position: center; /*posicionando o nome do produto */
+  top: 3%;  /* distância do topo */
+  font-size: 2rem;  /* tamanho da fonte */
+  font-weight: 700; /* AJUSTANDO O TAMANHO */ 
+  font-family: 'Courier New', Courier, monospace;  /* definindo fonte */
+}
+
+
+footer{ /* rodape do produto */
+    flex: 1 1 100%;   /* flex-grow, flex-shrink e flex-basis */
+    height: 50px; /* altura do rodapé */
+    justify-content: center; /* CENTRALIZA HORIZONTALMENTE DO RODAPÉ */
+    align-items: center; /* centraliza verticalmente */
+}
+
+
